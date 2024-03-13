@@ -3,31 +3,72 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --task-color-green: #009b00;
+    --task-color-yellow: #e9d902;
+    --task-color-red: #dd2202;
+    --task-color-purple: #a800a8;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+h2 {
+    font-size: larger;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+p {
+    font-size: small;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Styling for the main dashboard */
+
+.taskCol {
+    display: flex;
+    height: 85vh; 
+    flex-direction: column;
+}
+
+.openCol {
+}
+
+.wipCol {
+    border-right: grey solid 1px;
+    border-left: grey solid 1px;
+}
+
+.doneCol {
+}
+
+
+
+
+/* Styling for the taskboxes */
+
+.headerMainPage {
+    border-bottom: 1px solid #e2e8f0;
+}
+
+
+.taskBox {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 15rem;
+    height: 15rem;
+}
+
+.taskBoxColor {
+    border-start-start-radius: 9px;
+    border-start-end-radius: 9px;
+    background-color: var(--task-color-green);
+    padding: 6px;
+}
+
+
+.taskBoxContent {
+    
+}
+
+.taskBoxHeader {
+    border-bottom: grey 1px solid;
+}
+
+.taskBoxTextContent {
+    padding-top: 1rem;
 }
